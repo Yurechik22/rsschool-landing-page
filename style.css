@@ -1,0 +1,45 @@
+/* Базовые настройки размеров элементов */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Временное оформление для проверки структуры */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #403f3d;
+  background-color: #e1d4c9;
+}
+
+/* Общий контейнер для содержимого */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 40px;
+}
+
+/* Внутренние отступы основных частей */
+.header,
+.footer {
+  padding-block: 24px;
+}
+
+main {
+  padding-block: 40px;
+}
+
+/* Ссылки наследуют цвет текста */
+a {
+  color: inherit;
+}
+
+/* Видимый фокус при навигации клавиатурой */
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
