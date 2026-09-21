@@ -43,3 +43,49 @@ a:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 4px;
 }
+/* Логотип и навигация в одной строке */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Ссылка с логотипом */
+.logo {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Размер логотипа без искажения пропорций */
+.logo img {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+/* Горизонтальный список навигации */
+.nav-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Оформление ссылок навигации */
+.nav-list a {
+  display: inline-block;
+  padding-block: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
