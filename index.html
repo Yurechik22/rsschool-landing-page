@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Coffee House — enjoy premium coffee in a cozy atmosphere."
+  >
+  <title>Coffee House</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="./index.html" aria-label="Coffee House home">
+  <img
+    src="./assets/icons/logo.svg"
+    alt="Resource Coffee House"
+    width="100"
+    height="60"
+  >
+</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#favorite-coffee">Favorite coffee</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#mobile-app">Mobile app</a></li>
+          <li><a href="#contacts">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <a class="menu-link" href="./menu.html">
+        <span>Menu</span>
+        <span aria-hidden="true">☕</span>
+      </a>
+
+      <button
+        class="burger-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero__content">
+        <h1>
+          Enjoy premium coffee at our
+          <em>charming cafe</em>
+        </h1>
+
+        <p>
+          With its inviting atmosphere and delicious coffee options,
+          the Coffee House Resource is a popular destination for coffee
+          lovers and those seeking a warm and inviting space to enjoy
+          their favorite beverage.
+        </p>
+
+        <a class="button button--primary" href="./menu.html">
+          <span>Menu</span>
+          <span aria-hidden="true">☕</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="favorites section container" id="favorite-coffee">
+      <h2>Choose your <em>favorite</em> coffee</h2>
+
+      <div class="slider">
+        <button
+          class="slider__button slider__button--previous"
+          type="button"
+          aria-label="Previous coffee"
+        >
+          ←
+        </button>
+
+        <article class="coffee-slide">
+          <img
+            src="./assets/img/favorites/favorite-coffee-1.jpg"
+            alt="S'mores Frappuccino"
+          >
+          <h3>S'mores Frappuccino</h3>
+          <p>
+            This new drink takes an espresso and mixes it with brown sugar
+            and cinnamon before being topped with oat milk.
+          </p>
+          <p class="coffee-slide__price">$5.50</p>
+        </article>
+
+        <button
+          class="slider__button slider__button--next"
+          type="button"
+          aria-label="Next coffee"
+        >
+          →
+        </button>
+      </div>
+
+      <div class="slider__pagination" aria-label="Slider pagination">
+        <button class="slider__dot slider__dot--active" type="button" aria-label="Slide 1"></button>
+        <button class="slider__dot" type="button" aria-label="Slide 2"></button>
+        <button class="slider__dot" type="button" aria-label="Slide 3"></button>
+      </div>
+    </section>
+
+    <section class="about section container" id="about">
+      <h2>
+        Resource is <em>the perfect and cozy place</em> where you can enjoy
+        a variety of hot beverages, relax, catch up with friends, or get
+        some work done.
+      </h2>
+
+      <div class="about__gallery">
+        <img src="./assets/img/about/about-1.jpg" alt="Woman drinking coffee">
+        <img src="./assets/img/about/about-2.jpg" alt="Man enjoying coffee">
+        <img src="./assets/img/about/about-3.jpg" alt="Coffee shop interior">
+        <img src="./assets/img/about/about-4.jpg" alt="People having coffee">
+      </div>
+    </section>
+
+    <section class="mobile-app section container" id="mobile-app">
+      <div class="mobile-app__content">
+        <h2>Download our <em>app</em> to stay in touch</h2>
+
+        <p>
+          Enhance your coffee experience with the Coffee House app.
+          It is the easiest way to order your favorite drinks and desserts.
+        </p>
+
+        <div class="store-links">
+          <a class="store-link" href="#" aria-label="Download on the App Store">
+            <span aria-hidden="true"></span>
+            <span>Available on the<br><strong>App Store</strong></span>
+          </a>
+
+          <a class="store-link" href="#" aria-label="Get it on Google Play">
+            <span aria-hidden="true">▶</span>
+            <span>Available on<br><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </div>
+
+      <img
+        class="mobile-app__image"
+        src="./assets/img/mobile-app/mobile-screens.png"
+        alt="Coffee House mobile application displayed on two phones"
+      >
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div class="footer__social">
+        <h2>Sip, Savor, Smile. <em>It’s coffee time!</em></h2>
+
+        <ul class="social-list">
+          <li><a href="#" aria-label="Coffee House on Twitter">𝕏</a></li>
+          <li><a href="#" aria-label="Coffee House on Instagram">◎</a></li>
+          <li><a href="#" aria-label="Coffee House on Facebook">f</a></li>
+        </ul>
+      </div>
+
+      <address class="footer__contacts">
+        <h3>Contact us</h3>
+        <a href="https://maps.google.com/?q=St.+Mango+Street,+NY">
+          📍 123 Main Street, New York
+        </a>
+        <a href="tel:+16035550123">☎ +1 (603) 555-0123</a>
+        <p>◷ Mon–Sat: 9:00–23:00</p>
+      </address>
+    </div>
+  </footer>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
