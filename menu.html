@@ -2,291 +2,296 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Coffee House menu: coffee, tea, and desserts."
-  >
-  <title>Menu — Coffee House</title>
-  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resource Coffee House menu: coffee, tea and desserts.">
+  <title>Menu | Resource Coffee House</title>
+  <link rel="icon" href="./assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,600&amp;display=swap">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Theme is applied before first paint to avoid a light/dark flash -->
+  <script src="./js/theme.js"></script>
+  <script src="./js/burger.js" defer></script>
+  <script src="./js/products.js" defer></script>
+  <script src="./js/menu.js" defer></script>
 </head>
 
 <body>
   <header class="header">
-    <div class="container header-inner">
-      <a class="logo" href="./index.html" aria-label="Coffee House home">
-        <img
-          src="./assets/icons/logo.svg"
-          alt="Resource Coffee House"
-          width="100"
-          height="60"
-        >
+    <div class="container header__inner">
+      <a class="logo" href="./index.html" aria-label="Resource Coffee House, home page">
+        <img class="logo__img logo__img--light" src="./assets/icons/logo.svg" alt="" width="100" height="60">
+        <img class="logo__img logo__img--dark" src="./assets/icons/logo-dark.svg" alt="" width="100" height="60">
       </a>
 
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul class="nav-list">
-          <li><a href="./index.html#favorite-coffee">Favorite coffee</a></li>
-          <li><a href="./index.html#about">About</a></li>
-          <li><a href="./index.html#mobile-app">Mobile app</a></li>
-          <li><a href="#contacts">Contact us</a></li>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="./index.html#favorite-coffee">Favorite coffee</a></li>
+          <li class="nav__item"><a class="nav__link" href="./index.html#about">About</a></li>
+          <li class="nav__item"><a class="nav__link" href="./index.html#mobile-app">Mobile app</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contacts">Contact us</a></li>
+          <li class="nav__item nav__item--menu">
+            <a class="nav__link nav__link--menu" href="./menu.html" aria-current="page">
+              <span>Menu</span>
+              <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"/>
+                  <path d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675"/>
+                  <path d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5"/>
+                  <path d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"/>
+                </g>
+              </svg>
+            </a>
+          </li>
         </ul>
       </nav>
 
-      <a class="menu-link" href="./menu.html" aria-current="page">
-  <span>Menu</span>
-  <img
-    class="menu-link__icon"
-    src="./assets/icons/coffee-cup.svg"
-    alt=""
-  >
-</a>
+      <button class="theme-switch" type="button" aria-pressed="false" aria-label="Dark theme">
+        <span class="theme-switch__option theme-switch__option--light">
+          <svg class="icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M10 3V1C10 0.45 10.45 0 11 0C11.55 0 12 0.45 12 1V3C12 3.55 11.55 4 11 4C10.45 4 10 3.55 10 3ZM17.36 6.05L18.77 4.63C19.16 4.24 19.16 3.61 18.77 3.22C18.38 2.83 17.75 2.83 17.36 3.22L15.95 4.64C15.56 5.03 15.56 5.66 15.95 6.05C16.34 6.44 16.97 6.44 17.36 6.05ZM21 10H19C18.45 10 18 10.45 18 11C18 11.55 18.45 12 19 12H21C21.55 12 22 11.55 22 11C22 10.45 21.55 10 21 10ZM11 18C10.45 18 10 18.45 10 19V21C10 21.55 10.45 22 11 22C11.55 22 12 21.55 12 21V19C12 18.45 11.55 18 11 18ZM4.64 6.05L3.22 4.64C2.83 4.25 2.83 3.61 3.22 3.23C3.61 2.85 4.25 2.84 4.63 3.23L6.04 4.64C6.43 5.03 6.43 5.67 6.04 6.05C5.65 6.43 5.02 6.44 4.64 6.05ZM15.95 15.95C15.56 16.34 15.56 16.98 15.95 17.36L17.36 18.77C17.75 19.16 18.39 19.16 18.77 18.77C19.16 18.38 19.16 17.74 18.77 17.36L17.36 15.95C16.98 15.56 16.34 15.56 15.95 15.95ZM1 12H3C3.55 12 4 11.55 4 11C4 10.45 3.55 10 3 10H1C0.45 10 0 10.45 0 11C0 11.55 0.45 12 1 12ZM4.64 18.78L6.05 17.37C6.44 16.98 6.44 16.34 6.05 15.96C5.66 15.58 5.02 15.57 4.64 15.96L3.23 17.37C2.84 17.76 2.84 18.4 3.23 18.78C3.61 19.17 4.25 19.17 4.64 18.78ZM11 5C7.69 5 5 7.69 5 11C5 14.31 7.69 17 11 17C14.31 17 17 14.31 17 11C17 7.69 14.31 5 11 5Z"/>
+          </svg>
+        </span>
+        <span class="theme-switch__option theme-switch__option--dark">
+          <svg class="icon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M9 0C4.03 0 0 4.03 0 9C0 13.97 4.03 18 9 18C13.97 18 18 13.97 18 9C18 8.54 17.96 8.08 17.9 7.64C16.92 9.01 15.32 9.9 13.5 9.9C10.52 9.9 8.1 7.48 8.1 4.5C8.1 2.69 8.99 1.08 10.36 0.0999999C9.92 0.0399999 9.46 0 9 0Z"/>
+          </svg>
+        </span>
+      </button>
 
-      <button
-        class="burger-button"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
+      <a class="menu-link" href="./menu.html" aria-current="page">
+        <span>Menu</span>
+        <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"/>
+            <path d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675"/>
+            <path d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5"/>
+            <path d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"/>
+          </g>
+        </svg>
+      </a>
+
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
       </button>
     </div>
   </header>
 
   <main>
-    <section class="menu-page section container">
-      <h1>
-        Behind each of our cups hides an
-        <em>amazing surprise</em>
-      </h1>
+    <section class="menu section" aria-labelledby="menu-title">
+      <div class="container">
+        <h1 class="section-title section-title--center menu__title" id="menu-title">
+          Behind each of our cups hides an <em class="accent">amazing surprise</em>
+        </h1>
 
-      <div class="menu-tabs" role="tablist" aria-label="Product categories">
-        <button
-          class="menu-tab menu-tab--active"
-          type="button"
-          role="tab"
-          aria-selected="true"
-          data-category="coffee"
-        >
-          <span class="menu-tab__icon" aria-hidden="true">☕</span>
-          <span>Coffee</span>
-        </button>
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <button class="tab tab--active" type="button" role="tab" id="tab-coffee"
+            aria-selected="true" aria-controls="products-panel" tabindex="0" data-category="coffee">
+            <span class="tab__icon" aria-hidden="true">☕</span>
+            <span>Coffee</span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-tea"
+            aria-selected="false" aria-controls="products-panel" tabindex="-1" data-category="tea">
+            <span class="tab__icon" aria-hidden="true">🫖</span>
+            <span>Tea</span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-dessert"
+            aria-selected="false" aria-controls="products-panel" tabindex="-1" data-category="dessert">
+            <span class="tab__icon" aria-hidden="true">🍰</span>
+            <span>Dessert</span>
+          </button>
+        </div>
 
-        <button
-          class="menu-tab"
-          type="button"
-          role="tab"
-          aria-selected="false"
-          data-category="tea"
-        >
-          <span class="menu-tab__icon" aria-hidden="true">🍵</span>
-          <span>Tea</span>
-        </button>
+        <div class="products" id="products-panel" role="tabpanel" aria-labelledby="tab-coffee" tabindex="0">
+          <ul class="products__list">
+            <li class="products__item">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img class="product-card__img" src="./assets/img/menu/coffee-1.png" alt="Irish coffee" width="310" height="310" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <h2 class="product-card__title">Irish coffee</h2>
+                  <p class="product-card__text">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                  <p class="product-card__price">$7.00</p>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img class="product-card__img" src="./assets/img/menu/coffee-2.png" alt="Kahlua coffee" width="310" height="310" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <h2 class="product-card__title">Kahlua coffee</h2>
+                  <p class="product-card__text">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+                  <p class="product-card__price">$7.00</p>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img class="product-card__img" src="./assets/img/menu/coffee-3.png" alt="Honey raf" width="310" height="310" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <h2 class="product-card__title">Honey raf</h2>
+                  <p class="product-card__text">Espresso with frothed milk, cream and aromatic honey</p>
+                  <p class="product-card__price">$5.50</p>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img class="product-card__img" src="./assets/img/menu/coffee-4.png" alt="Ice cappuccino" width="310" height="310" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <h2 class="product-card__title">Ice cappuccino</h2>
+                  <p class="product-card__text">Cappuccino with soft thick foam in summer version with ice</p>
+                  <p class="product-card__price">$5.00</p>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img class="product-card__img" src="./assets/img/menu/coffee-5.png" alt="Espresso" width="310" height="310" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <h2 class="product-card__title">Espresso</h2>
+                  <p class="product-card__text">Classic black coffee</p>
+                  <p class="product-card__price">$4.50</p>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img class="product-card__img" src="./assets/img/menu/coffee-6.png" alt="Latte" width="310" height="310" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <h2 class="product-card__title">Latte</h2>
+                  <p class="product-card__text">Espresso coffee with the addition of steamed milk and dense milk foam</p>
+                  <p class="product-card__price">$5.50</p>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img class="product-card__img" src="./assets/img/menu/coffee-7.png" alt="Latte macchiato" width="310" height="310" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <h2 class="product-card__title">Latte macchiato</h2>
+                  <p class="product-card__text">Espresso with frothed milk and chocolate</p>
+                  <p class="product-card__price">$5.50</p>
+                </div>
+              </article>
+            </li>
+            <li class="products__item">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <img class="product-card__img" src="./assets/img/menu/coffee-8.png" alt="Coffee with cognac" width="310" height="310" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <h2 class="product-card__title">Coffee with cognac</h2>
+                  <p class="product-card__text">Fragrant black coffee with cognac and whipped cream</p>
+                  <p class="product-card__price">$6.50</p>
+                </div>
+              </article>
+            </li>
+          </ul>
 
-        <button
-          class="menu-tab"
-          type="button"
-          role="tab"
-          aria-selected="false"
-          data-category="dessert"
-        >
-          <span class="menu-tab__icon" aria-hidden="true">🍰</span>
-          <span>Dessert</span>
-        </button>
+          <button class="round-button products__more" type="button" aria-label="Show more products" aria-controls="products-panel">
+            <svg class="icon" width="24" height="24" viewBox="18 18 24 24" fill="none" aria-hidden="true" focusable="false">
+              <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M39.8883 31.5C39.1645 36.3113 35.013 40 30 40C24.4772 40 20 35.5228 20 30C20 24.4772 24.4772 20 30 20C34.1006 20 37.6248 22.4682 39.1679 26"/>
+                <path d="M35 26H39.4C39.7314 26 40 25.7314 40 25.4V21"/>
+              </g>
+            </svg>
+          </button>
+        </div>
       </div>
-
-      <div class="products-grid" id="products-list">
-        <article class="product-card">
-          <img
-            src="./assets/img/menu/coffee-1.png"
-            alt="Irish coffee"
-          >
-
-          <div class="product-card__content">
-            <h2>Irish coffee</h2>
-            <p>
-              Fragrant black coffee with Jameson Irish whiskey and whipped milk
-            </p>
-            <p class="product-card__price">$7.00</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img
-            src="./assets/img/menu/coffee-2.png"
-            alt="Kahlua coffee"
-          >
-
-          <div class="product-card__content">
-            <h2>Kahlua coffee</h2>
-            <p>
-              Classic coffee with milk, Kahlua liqueur under a cap of whipped cream
-            </p>
-            <p class="product-card__price">$7.00</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img
-            src="./assets/img/menu/coffee-3.png"
-            alt="Honey raf"
-          >
-
-          <div class="product-card__content">
-            <h2>Honey raf</h2>
-            <p>
-              Espresso with creamy foam, honey and delicate vanilla aroma
-            </p>
-            <p class="product-card__price">$5.50</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img
-            src="./assets/img/menu/coffee-4.png"
-            alt="Ice cappuccino"
-          >
-
-          <div class="product-card__content">
-            <h2>Ice cappuccino</h2>
-            <p>
-              Cappuccino with soft foam, ice and a refreshing coffee taste
-            </p>
-            <p class="product-card__price">$5.00</p>
-          </div>
-        </article>
-        <article class="product-card">
-  <img
-    src="./assets/img/menu/coffee-5.png"
-    alt="Espresso"
-  >
-
-  <div class="product-card__content">
-    <h2>Espresso</h2>
-    <p>Classic black coffee with a rich flavor and aroma.</p>
-    <p class="product-card__price">$4.50</p>
-  </div>
-</article>
-
-<article class="product-card">
-  <img
-    src="./assets/img/menu/coffee-6.png"
-    alt="Latte"
-  >
-
-  <div class="product-card__content">
-    <h2>Latte</h2>
-    <p>Espresso with steamed milk and a delicate layer of milk foam.</p>
-    <p class="product-card__price">$5.50</p>
-  </div>
-</article>
-
-<article class="product-card">
-  <img
-    src="./assets/img/menu/coffee-7.png"
-    alt="Latte macchiato"
-  >
-
-  <div class="product-card__content">
-    <h2>Latte macchiato</h2>
-    <p>Espresso with plenty of steamed milk and smooth creamy foam.</p>
-    <p class="product-card__price">$5.50</p>
-  </div>
-</article>
-
-<article class="product-card">
-  <img
-    src="./assets/img/menu/coffee-8.png"
-    alt="Coffee with cognac"
-  >
-
-  <div class="product-card__content">
-    <h2>Coffee with cognac</h2>
-    <p>Strong black coffee with cognac and a warm aromatic finish.</p>
-    <p class="product-card__price">$6.50</p>
-  </div>
-</article>
-      </div>
-
-      <button
-        class="load-more"
-        type="button"
-        aria-label="Show more products"
-      >
-        ↻
-      </button>
     </section>
   </main>
 
   <footer class="footer" id="contacts">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__social">
-        <h2>
-          Sip, Savor, Smile.
-          <em>It’s coffee time!</em>
-        </h2>
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__social">
+          <h2 class="footer__title">
+            Sip, Savor, Smile.
+            <em class="accent">It’s coffee time!</em>
+          </h2>
 
-        <ul class="social-list">
-          <li>
-            <a href="#" aria-label="Coffee House on Twitter">
-              <img src="./assets/icons/twitter.svg" alt="">
-            </a>
-          </li>
+          <ul class="social-list">
+            <li>
+              <a class="social-link" href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Resource on Twitter">
+                <svg class="icon" width="24" height="24" viewBox="-0.5 -2.5 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M22.5 0.510056C22.5 0.510056 20.4821 1.70217 19.36 2.04006C18.7577 1.34757 17.9573 0.856748 17.067 0.633982C16.1767 0.411216 15.2395 0.467251 14.3821 0.794509C13.5247 1.12177 12.7884 1.70446 12.273 2.46377C11.7575 3.22309 11.4877 4.12239 11.5 5.04006V6.04006C9.74263 6.08562 8.00127 5.69587 6.43101 4.9055C4.86074 4.11513 3.51032 2.94869 2.5 1.51006C2.5 1.51006 -1.5 10.5101 7.5 14.5101C5.44053 15.908 2.98716 16.609 0.5 16.5101C9.5 21.5101 20.5 16.5101 20.5 5.01006C20.4991 4.73151 20.4723 4.45365 20.42 4.18006C21.4406 3.17355 22.5 0.510056 22.5 0.510056Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Resource on Instagram">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="4"/>
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <path d="m17.5 6.51.01-.011"/>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Resource on Facebook">
+                <svg class="icon" width="24" height="24" viewBox="-6 -1.5 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M11.5 0.5H8.5C7.17392 0.5 5.90215 1.02678 4.96447 1.96447C4.02678 2.90215 3.5 4.17392 3.5 5.5V8.5H0.5V12.5H3.5V20.5H7.5V12.5H10.5L11.5 8.5H7.5V5.5C7.5 5.23478 7.60536 4.98043 7.79289 4.79289C7.98043 4.60536 8.23478 4.5 8.5 4.5H11.5V0.5Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-          <li>
-            <a href="#" aria-label="Coffee House on Instagram">
-              <img src="./assets/icons/instagram.svg" alt="">
-            </a>
-          </li>
+        <div class="footer__contacts">
+          <h3 class="footer__subtitle">Contact us</h3>
 
-          <li>
-            <a href="#" aria-label="Coffee House on Facebook">
-              <img src="./assets/icons/facebook.svg" alt="">
-            </a>
-          </li>
-        </ul>
+          <address class="contacts">
+            <ul class="contacts__list">
+              <li>
+                <a class="contact-link" href="https://maps.google.com/?q=8558+Green+Rd,+Los+Angeles" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" width="20" height="20" viewBox="-2.5 -0.5 20 20" fill="none" aria-hidden="true" focusable="false">
+                    <path d="M14.0833 7.41667C14.0833 11.0986 7.41667 17.4167 7.41667 17.4167C7.41667 17.4167 0.75 11.0986 0.75 7.41667C0.75 3.73477 3.73477 0.75 7.41667 0.75C11.0986 0.75 14.0833 3.73477 14.0833 7.41667Z" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                  <span>8558 Green Rd., LA</span>
+                </a>
+              </li>
+              <li>
+                <a class="contact-link" href="tel:+16035550123">
+                  <svg class="icon" width="20" height="20" viewBox="-1 -1 20 20" fill="none" aria-hidden="true" focusable="false">
+                    <path d="M13.9734 11.335L10.5415 12C8.22345 10.8365 6.79154 9.5 5.95821 7.41667L6.59983 3.97491L5.38697 0.75L2.60446 0.75C1.47691 0.75 0.589659 1.68295 0.776079 2.79498C1.17388 5.16791 2.24731 9.12244 5.12487 12C8.14838 15.0235 12.4411 16.4151 15.0128 17.0121C16.174 17.2817 17.2082 16.3742 17.2082 15.1821L17.2082 12.5677L13.9734 11.335Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>+1 (603) 555-0123</span>
+                </a>
+              </li>
+              <li>
+                <p class="contact-link contact-link--static">
+                  <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                    <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M10 5v5h5"/>
+                      <circle cx="10" cy="10" r="8.333"/>
+                    </g>
+                  </svg>
+                  <span>Mon–Sat: <time datetime="09:00">9:00</time>–<time datetime="23:00">23:00</time></span>
+                </p>
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
-
-      <address class="footer__contacts">
-        <h3>Contact us</h3>
-
-        <a
-          class="contact-link"
-          href="https://maps.google.com/?q=8558+Green+Rd,+Los+Angeles"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="contact-link__icon"
-            src="./assets/icons/location.svg"
-            alt=""
-          >
-          <span>8558 Green Rd., LA</span>
-        </a>
-
-        <a class="contact-link" href="tel:+16035550123">
-          <img
-            class="contact-link__icon"
-            src="./assets/icons/phone.svg"
-            alt=""
-          >
-          <span>+1 (603) 555-0123</span>
-        </a>
-
-        <p class="contact-link contact-link--static">
-          <img
-            class="contact-link__icon"
-            src="./assets/icons/clock.svg"
-            alt=""
-          >
-          <span>Mon–Sat: 9:00–23:00</span>
-        </p>
-      </address>
     </div>
-  </div>
-</footer>
-
-  <script src="./js/menu.js"></script>
+  </footer>
 </body>
 </html>
