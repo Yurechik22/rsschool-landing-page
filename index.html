@@ -33,9 +33,13 @@
       </nav>
 
       <a class="menu-link" href="./menu.html">
-        <span>Menu</span>
-        <span aria-hidden="true">☕</span>
-      </a>
+  <span>Menu</span>
+  <img
+    class="menu-link__icon"
+    src="./assets/icons/coffee-cup.svg"
+    alt=""
+  >
+</a>
 
       <button
         class="burger-button"
@@ -136,17 +140,29 @@
           It is the easiest way to order your favorite drinks and desserts.
         </p>
 
-        <div class="store-links">
-          <a class="store-link" href="#" aria-label="Download on the App Store">
-            <span aria-hidden="true"></span>
-            <span>Available on the<br><strong>App Store</strong></span>
-          </a>
+    <div class="store-links">
+  <a
+    class="store-link store-link--image"
+    href="#"
+    aria-label="Download on the App Store"
+  >
+    <img
+      src="./assets/icons/app-store.svg"
+      alt=""
+    >
+  </a>
 
-          <a class="store-link" href="#" aria-label="Get it on Google Play">
-            <span aria-hidden="true">▶</span>
-            <span>Available on<br><strong>Google Play</strong></span>
-          </a>
-        </div>
+  <a
+    class="store-link store-link--image"
+    href="#"
+    aria-label="Get it on Google Play"
+  >
+    <img
+      src="./assets/icons/google-play.svg"
+      alt=""
+    >
+  </a>
+</div>
       </div>
 
       <img
@@ -158,27 +174,73 @@
   </main>
 
   <footer class="footer" id="contacts">
-    <div class="container footer__inner">
+  <div class="container">
+    <div class="footer__inner">
       <div class="footer__social">
-        <h2>Sip, Savor, Smile. <em>It’s coffee time!</em></h2>
+        <h2>
+          Sip, Savor, Smile.
+          <em>It’s coffee time!</em>
+        </h2>
 
         <ul class="social-list">
-          <li><a href="#" aria-label="Coffee House on Twitter">𝕏</a></li>
-          <li><a href="#" aria-label="Coffee House on Instagram">◎</a></li>
-          <li><a href="#" aria-label="Coffee House on Facebook">f</a></li>
+          <li>
+            <a href="#" aria-label="Coffee House on Twitter">
+              <img src="./assets/icons/twitter.svg" alt="">
+            </a>
+          </li>
+
+          <li>
+            <a href="#" aria-label="Coffee House on Instagram">
+              <img src="./assets/icons/instagram.svg" alt="">
+            </a>
+          </li>
+
+          <li>
+            <a href="#" aria-label="Coffee House on Facebook">
+              <img src="./assets/icons/facebook.svg" alt="">
+            </a>
+          </li>
         </ul>
       </div>
 
       <address class="footer__contacts">
         <h3>Contact us</h3>
-        <a href="https://maps.google.com/?q=St.+Mango+Street,+NY">
-          📍 123 Main Street, New York
+
+        <a
+          class="contact-link"
+          href="https://maps.google.com/?q=8558+Green+Rd,+Los+Angeles"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="contact-link__icon"
+            src="./assets/icons/location.svg"
+            alt=""
+          >
+          <span>8558 Green Rd., LA</span>
         </a>
-        <a href="tel:+16035550123">☎ +1 (603) 555-0123</a>
-        <p>◷ Mon–Sat: 9:00–23:00</p>
+
+        <a class="contact-link" href="tel:+16035550123">
+          <img
+            class="contact-link__icon"
+            src="./assets/icons/phone.svg"
+            alt=""
+          >
+          <span>+1 (603) 555-0123</span>
+        </a>
+
+        <p class="contact-link contact-link--static">
+          <img
+            class="contact-link__icon"
+            src="./assets/icons/clock.svg"
+            alt=""
+          >
+          <span>Mon–Sat: 9:00–23:00</span>
+        </p>
       </address>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <script src="./js/index.js"></script>
 </body>
